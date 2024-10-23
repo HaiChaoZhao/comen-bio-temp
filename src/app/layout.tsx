@@ -17,6 +17,8 @@ export default function RootLayout({
   return (
     <html lang="zh-Hans">
       <body className=" mx-auto">
+        <HeaderNav />
+
         {children}
         <Footer />
         <BackTop />

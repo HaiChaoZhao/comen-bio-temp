@@ -1,4 +1,5 @@
-import React, { FC } from 'react';
+'use client';
+import React, { FC, useEffect, useState } from 'react';
 import { Logo } from '../common/Logo';
 import Image from 'next/image';
 import { config } from '../common/config';
@@ -11,10 +12,37 @@ import {
 import { Nav } from './Nav';
 import Link from 'next/link';
 import { cn } from '@/lib/utils';
+import { useThrottleFn } from 'ahooks';
 
 export const HeaderNav: FC<{ className?: string }> = ({ className }) => {
+  const [curOffsetTop, setCurOffsetTop] = useState(0);
+
+  const { run } = useThrottleFn(setCurOffsetTop, {
+    wait: 200,
+  });
+
+  useEffect(() => {
+    const handleScroll = () => {
+      run(window.scrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
-    <header className={cn(className, 'h-20')}>
+    <header
+      className={cn(
+        className,
+        'h-20 fixed top-0 transition-all duration-100 bg-transparent w-[100vw]',
+      )}
+      style={{
+        background: curOffsetTop > 80 ? '#fff' : 'transparent',
+      }}
+    >
       <div className="container mx-auto flex justify-between">
         <Link href="/">
           <Logo className="pt-2" />

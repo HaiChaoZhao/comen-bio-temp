@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { HeaderNav } from '@/components/Nav/Header';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/Tabs';
 import { HotProducts } from '@/components/Home/HotProducts';
+import { BannerContainer } from '@/components/common/BannerContainer';
 
 const arimo = Arimo({
   weight: '700',
@@ -16,7 +17,6 @@ const arimo = Arimo({
 export default function Home() {
   return (
     <div className="home">
-      <HeaderNav className="bg-gradient-primary" />
       <Banner />
       <Research />
       <HotProducts />
@@ -27,7 +27,7 @@ export default function Home() {
 
 function Banner() {
   return (
-    <div className="banner h-[710px] bg-gradient-to-r from-[#EBF6F4] to-[#F2F8F8]">
+    <BannerContainer className="banner h-[710px] bg-gradient-to-r from-[#EBF6F4] to-[#F2F8F8]">
       <div className="banner-1 h-full container-left ">
         <div className="flex">
           <div className="mt-[177px]">
@@ -51,7 +51,7 @@ function Banner() {
           ></Image>
         </div>
       </div>
-    </div>
+    </BannerContainer>
   );
 }
 
