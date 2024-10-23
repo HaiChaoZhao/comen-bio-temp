@@ -8,15 +8,15 @@ export const Nav: FC = () => {
 
   const items = [
     {
-      href: 'product/solution',
+      href: '/product/solution',
       name: '产品解决方案',
     },
     {
-      href: 'about',
+      href: '/about',
       name: '关于我们',
     },
     {
-      href: 'contact',
+      href: '/contact',
       name: '联系我们',
     },
   ];

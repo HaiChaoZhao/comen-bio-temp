@@ -37,7 +37,7 @@ export const HeaderNav: FC<{ className?: string }> = ({ className }) => {
     <header
       className={cn(
         className,
-        'h-20 fixed top-0 transition-all duration-100 bg-transparent w-[100vw]',
+        'h-20 fixed top-0 transition-all duration-100 w-[100vw] z-50',
       )}
       style={{
         background: curOffsetTop > 80 ? '#fff' : 'transparent',
