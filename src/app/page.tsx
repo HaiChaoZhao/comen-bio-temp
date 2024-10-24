@@ -3,8 +3,6 @@ import Image from 'next/image';
 import { Arimo } from 'next/font/google';
 import { Button } from '@/components/Button';
 import Link from 'next/link';
-import { HeaderNav } from '@/components/Nav/Header';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/Tabs';
 import { HotProducts } from '@/components/Home/HotProducts';
 import { BannerContainer } from '@/components/common/BannerContainer';
 

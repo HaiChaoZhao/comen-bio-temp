@@ -31,7 +31,7 @@ export const HeaderNav: FC<{ className?: string }> = ({ className }) => {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, []);
+  }, [run]);
 
   return (
     <header
