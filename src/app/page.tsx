@@ -93,7 +93,7 @@ function Research() {
       <p className="mt-5">
         在产品领域，科曼生物目前已覆盖血球、特定蛋白分析仪、生化免疫、化学发光、凝血分析等五大领域系列，公司致力于提供科室综合解决方案，通过整合产品线和技术优势，帮助医疗机构提升检验效率和质量，为用户提供更加准确、及时的诊断服务。
       </p>
-      <div className="mt-10 mb-[120px] flex flex-wrap gap-6">
+      <div className="mt-10 mb-[120px] flex flex-wrap gap-6 justify-center">
         {searchList.map((el) => {
           return (
             <div
