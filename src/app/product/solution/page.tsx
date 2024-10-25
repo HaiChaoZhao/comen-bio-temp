@@ -8,6 +8,7 @@ export default function ProductSolution() {
     <div className="product-solution">
       <BannerContainer className="h-[790px]">
         <Image
+          className="mx-auto"
           src={getOssUrl('product-solution-banner.png')}
           alt="banner"
           width={1920}

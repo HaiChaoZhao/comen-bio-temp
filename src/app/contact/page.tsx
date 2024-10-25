@@ -10,6 +10,7 @@ export default function ContactUs() {
     <div className="contactus">
       <BannerContainer>
         <Image
+          className="mx-auto"
           src={getOssUrl('contact-banner.png')}
           alt="contact-banner"
           width={1920}

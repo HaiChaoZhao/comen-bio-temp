@@ -7,6 +7,7 @@ export default function About() {
     <div className="about ">
       <BannerContainer>
         <Image
+          className="mx-auto"
           src={getOssUrl('about.png')}
           alt="about"
           width={1920}
